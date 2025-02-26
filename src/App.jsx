@@ -1,4 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import "@mantine/core/styles.css";
+import { MantineProvider } from "@mantine/core";
 
 import AppLayout from "./layouts/app-layout";
 import ProtectedRoute from "./components/protected-route";
@@ -11,6 +13,7 @@ import JobListing from "./pages/jobListing";
 import MyJobs from "./pages/my-jobs";
 import SavedJobs from "./pages/saved-jobs";
 import JobPage from "./pages/job";
+import Platform from "./pages/platform";
 
 import "./App.css";
 
@@ -20,7 +23,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <LandingPage />,
+        element: <Platform />,
       },
       {
         path: "/onboarding",
@@ -70,6 +73,10 @@ const router = createBrowserRouter([
           </ProtectedRoute>
         ),
       },
+      {
+        path: "/platform",
+        element: <LandingPage />,
+      },
     ],
   },
 ]);
@@ -77,7 +84,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <RouterProvider router={router} />
+      <MantineProvider>
+        <RouterProvider router={router} />
+      </MantineProvider>
     </ThemeProvider>
   );
 }
