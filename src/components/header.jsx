@@ -36,11 +36,15 @@ const Header = () => {
 
         <div className="flex gap-8">
           
-          <SignedOut>
-            <Button variant="outline" onClick={() => setShowSignIn(true)}>
-              Login
-            </Button>
-          </SignedOut>
+        <SignedOut>
+  <Button 
+    variant="outline" 
+    onClick={() => setShowSignIn(true)}
+    className="text-white bg-blue-600 hover:bg-blue-700 border-blue-600 hover:border-blue-700"
+  >
+    Login
+  </Button>
+</SignedOut>
           <SignedIn>
             {user?.unsafeMetadata?.role === "recruiter" && (
               <Link to="/post-job">
@@ -77,16 +81,19 @@ const Header = () => {
       </nav>
 
       {showSignIn && (
-        <div
-          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
-          onClick={handleOverlayClick}
-        >
-          <SignIn
-            signUpForceRedirectUrl="/onboarding"
-            fallbackRedirectUrl="/onboarding"
-          />
-        </div>
-      )}
+  <div
+    className="fixed inset-0 flex items-center justify-center bg-gray-500 bg-opacity-50 z-50"
+    onClick={handleOverlayClick}
+  >
+    <div className="bg-white rounded-lg shadow-xl w-full max-w-md p-6">
+      <SignIn
+        signUpForceRedirectUrl="/onboarding"
+        fallbackRedirectUrl="/onboarding"
+      />
+    </div>
+  </div>
+)}
+      
     </>
   );
 };
