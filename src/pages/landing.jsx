@@ -310,7 +310,7 @@ const LandingPage = () => {
                     <span>Track application status in real-time</span>
                   </li>
                 </ul>
-                <Link to="/find-jobs">
+                <Link to="/jobs">
                   <Button variant="blue" size="lg" className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                     Find Jobs
                   </Button>
@@ -470,6 +470,25 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+       {/* Footer */}
+       <footer className="bg-white bg-opacity-80 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-500 mb-4 md:mb-0">© 2025 JobPrepAI. All rights reserved.</p>
+            <div className="flex space-x-6">
+              <a href="#" className="text-gray-500 hover:text-gray-700">
+                Privacy
+              </a>
+              <a href="#" className="text-gray-500 hover:text-gray-700">
+                Terms
+              </a>
+              <a href="#" className="text-gray-500 hover:text-gray-700">
+                Contact
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 };
