@@ -90,7 +90,7 @@ const LandingPage = () => {
   return (
     <main className="flex flex-col gap-10 sm:gap-20 py-10 sm:py-20">
       {/* Hero Section - Redesigned with left text and right graphics */}
-      <section className="flex flex-col md:flex-row items-center justify-between px-4 gap-8 mb-16">
+      <section className="flex flex-col md:flex-row items-center justify-between px-4 md:px-8 lg:px-16 gap-8 mb-16 w-full">
         {/* Left Side - Text Content */}
         <div className="md:w-1/2 text-left">
           <p className="text-blue-600 font-semibold mb-2">Easiest way to find a perfect job</p>
@@ -238,10 +238,10 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-
+    
       {/* NEW: Stats Counter Section */}
-      <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-4">
+      <section className="py-12 w-full">
+        <div className="w-full px-4 md:px-8 lg:px-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat) => (
               <div key={stat.id} className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:shadow-lg border border-gray-100">
@@ -255,9 +255,9 @@ const LandingPage = () => {
       </section>
 
       {/* Companies Carousel Section - Enhanced with title */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 mb-10">
-          <h2 className="text-3xl font-bold text-center mb-8">Trusted by Leading Companies</h2>
+      <section className="bg-white bg-opacity-80 py-20 mt-20 w-full">
+        <div className="w-full px-4 md:px-8 lg:px-16 mb-10">
+          <h2 className="text-3xl font-bold text-center mb-10">Trusted by Leading Companies</h2>
           <Carousel
             plugins={[Autoplay({ delay: 2000 })]}
             className="w-full"
@@ -277,40 +277,9 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* NEW: Job Categories Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">Explore Job Categories</h2>
-          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Browse opportunities across industries and find the perfect role for your skills and experience</p>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {jobCategories.map((category) => (
-              <Link to={`/jobs/category/${category.id}`} key={category.id}>
-                <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-5px] border border-gray-100 flex items-center">
-                  <div className="text-3xl mr-4">{category.icon}</div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-800">{category.name}</h3>
-                    <p className="text-gray-600">{category.count} open positions</p>
-                  </div>
-                  <ArrowRight className="ml-auto h-5 w-5 text-gray-400" />
-                </div>
-              </Link>
-            ))}
-          </div>
-          
-          <div className="text-center mt-10">
-            <Link to="/categories">
-              <Button variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-medium px-6 py-3 rounded-lg">
-                View All Categories
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Card Section for Job Seekers and Employers - Enhanced */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-20 w-full">
+        <div className="w-full px-4 md:px-8 lg:px-16">
           <h2 className="text-3xl font-bold text-center mb-4">How It Works</h2>
           <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">We connect talent with opportunity through our powerful platform</p>
           
@@ -385,9 +354,40 @@ const LandingPage = () => {
         </div>
       </section>
 
+      {/* NEW: Job Categories Section */}
+      <section className="bg-white bg-opacity-80 py-16 mt-12 w-full">
+        <div className="w-full px-4 md:px-8 lg:px-16">
+          <h2 className="text-3xl font-bold text-center mb-4">Explore Job Categories</h2>
+          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Browse opportunities across industries and find the perfect role for your skills and experience</p>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {jobCategories.map((category) => (
+              <Link to={`/jobs/category/${category.id}`} key={category.id}>
+                <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-5px] border border-gray-100 flex items-center">
+                  <div className="text-3xl mr-4">{category.icon}</div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-800">{category.name}</h3>
+                    <p className="text-gray-600">{category.count} open positions</p>
+                  </div>
+                  <ArrowRight className="ml-auto h-5 w-5 text-gray-400" />
+                </div>
+              </Link>
+            ))}
+          </div>
+          
+          <div className="text-center mt-10">
+            <Link to="/categories">
+              <Button variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-medium px-6 py-3 rounded-lg">
+                View All Categories
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* NEW: Testimonials Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+      <section className="py-16 w-full">
+        <div className="w-full px-4 md:px-8 lg:px-16">
           <h2 className="text-3xl font-bold text-center mb-4">What People Say</h2>
           <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Hear from job seekers and employers who've found success on our platform</p>
           
@@ -424,8 +424,8 @@ const LandingPage = () => {
       </section>
 
       {/* NEW: CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-500 to-orange-500 text-white">
-        <div className="container mx-auto px-4 text-center">
+      <section className="bg-opacity-80 mt-12 py-20 bg-gradient-to-r from-blue-600 via-purple-500 to-orange-500 text-white w-full">
+        <div className="w-full px-4 md:px-8 lg:px-16 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Take the Next Step in Your Career?</h2>
           <p className="text-xl max-w-2xl mx-auto mb-10 opacity-90">Join thousands of professionals who've found their dream jobs through our platform</p>
           <div className="flex flex-wrap justify-center gap-6">
@@ -444,8 +444,8 @@ const LandingPage = () => {
       </section>
 
       {/* FAQ Section - Enhanced */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-16 w-full">
+        <div className="w-full px-4 md:px-8 lg:px-16">
           <h2 className="text-4xl font-bold text-center mb-4">Frequently Asked Questions</h2>
           <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Find answers to common questions about our platform</p>
           
