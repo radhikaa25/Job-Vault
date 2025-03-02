@@ -14,6 +14,9 @@ import MyJobs from "./pages/my-jobs";
 import SavedJobs from "./pages/saved-jobs";
 import JobPage from "./pages/job";
 import Platform from "./pages/platform";
+import HowItWorks from "./pages/howItWorks";
+import About from "./pages/about";
+import Contact from "./pages/contact";
 
 import "./App.css";
 
@@ -24,6 +27,22 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Platform />,
+      },
+      {
+        path: "/howItWorks",
+        element: (
+          <ProtectedRoute>
+            <HowItWorks />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/about",
+        element: (
+          <ProtectedRoute>
+            <About/>
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/onboarding",
@@ -62,6 +81,14 @@ const router = createBrowserRouter([
         element: (
           <ProtectedRoute>
             <SavedJobs />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/contact",
+        element: (
+          <ProtectedRoute>
+            <Contact />
           </ProtectedRoute>
         ),
       },

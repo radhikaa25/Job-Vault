@@ -310,7 +310,7 @@ const LandingPage = () => {
                     <span>Track application status in real-time</span>
                   </li>
                 </ul>
-                <Link to="/find-jobs">
+                <Link to="/jobs">
                   <Button variant="blue" size="lg" className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                     Find Jobs
                   </Button>

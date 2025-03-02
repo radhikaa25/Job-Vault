@@ -30,24 +30,15 @@ const RedesignedPlatform = () => {
             </Link>
           </div>
           <div className="flex justify-center space-x-8 flex-1">
-            <a href="#" className="text-gray-700 hover:text-indigo-600 text-sm font-medium">
+            <Link to="/howItWorks" className="text-gray-700 hover:text-indigo-600 text-sm font-medium">
               How it works
-            </a>
-            <a href="#" className="text-gray-700 hover:text-indigo-600 text-sm font-medium">
+            </Link>
+            <Link to="/about" className="text-gray-700 hover:text-indigo-600 text-sm font-medium">
               About
-            </a>
-          </div>
-          <div className="flex-shrink-0 flex px-2 py-3 items-center space-x-6 justify-end">
-            <Link to="/login" className="text-gray-700 hover:text-indigo-700 text-sm font-medium">
-              Login
-            </Link>
-            <Link 
-              to="/signup" 
-              className="text-white bg-indigo-600 hover:bg-indigo-700 inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-full shadow-sm"
-            >
-              Sign up
             </Link>
           </div>
+
+         
         </div>
       </div>
 
@@ -71,10 +62,10 @@ const RedesignedPlatform = () => {
               Choose your path: Practice interviews with AI or discover your next
               career opportunity. We're here to help you succeed every step of the way.
             </p>
-            
+
             {/* Call to Action Buttons */}
             <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
-              <a 
+              <a
                 href="#cards"
                 className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-md text-white bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all"
               >
@@ -90,7 +81,7 @@ const RedesignedPlatform = () => {
               </a>
             </div>
           </div>
-          
+
           {/* Hero Graphic */}
           <div className="mt-10 md:mt-0 md:w-1/2 flex justify-center md:justify-end">
             <div className="relative w-full max-w-md">
@@ -98,14 +89,14 @@ const RedesignedPlatform = () => {
               <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
               <div className="absolute top-0 -right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
               <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
-              
+
               {/* Main Image */}
-              <img 
-                src="/api/placeholder/500/400" 
-                alt="Career growth illustration" 
+              <img
+                src="/api/placeholder/500/400"
+                alt="Career growth illustration"
                 className="relative rounded-lg shadow-2xl border-4 border-white"
               />
-              
+
               {/* Floating Elements */}
               <div className="absolute -top-6 -right-6 bg-white rounded-full p-3 shadow-lg">
                 <Brain className="w-8 h-8 text-orange-500" />
@@ -127,22 +118,22 @@ const RedesignedPlatform = () => {
               Watch our short demo to understand how JobPrepAI can transform your job search and interview preparation.
             </p>
           </div>
-          
+
           <div className="relative mx-auto max-w-4xl rounded-2xl overflow-hidden shadow-2xl">
             {/* Video */}
             <div className="aspect-w-16 aspect-h-9 bg-gray-900">
-              <video 
+              <video
                 ref={videoRef}
-                src="https://cdnjs.cloudflare.com/ajax/libs/sample-videos/videos/dummy/720/cute_dog.mp4" 
+                src="https://cdnjs.cloudflare.com/ajax/libs/sample-videos/videos/dummy/720/cute_dog.mp4"
                 className="w-full h-full object-cover"
                 poster="/api/placeholder/1280/720"
                 controls={false}
               ></video>
             </div>
-            
+
             {/* Custom Video Control */}
-            <button 
-              onClick={toggleVideo} 
+            <button
+              onClick={toggleVideo}
               className="absolute inset-0 flex items-center justify-center"
             >
               <div className="bg-white bg-opacity-80 rounded-full p-5 shadow-lg hover:bg-opacity-100 transition-all">
@@ -165,13 +156,13 @@ const RedesignedPlatform = () => {
             Our two powerful platforms work together to give you the complete career advancement solution.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Mock.ai Card */}
           <div className="bg-white bg-opacity-90 rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:bg-gradient-to-br hover:from-white hover:to-orange-100 hover:transform hover:-translate-y-1 relative">
             {/* Decorative Pattern */}
             <div className="absolute top-0 right-0 w-24 h-24 bg-orange-100 rounded-bl-full opacity-70"></div>
-            
+
             <div className="p-8 relative">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="p-3 bg-orange-100 rounded-full">
@@ -179,7 +170,7 @@ const RedesignedPlatform = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900">Mock.ai</h3>
               </div>
-              
+
               {/* Feature List with Icons */}
               <div className="mb-8">
                 <p className="text-gray-600 mb-4">
@@ -213,16 +204,16 @@ const RedesignedPlatform = () => {
                   </li>
                 </ul>
               </div>
-              
+
               {/* Image */}
               <div className="mb-8 rounded-lg overflow-hidden">
-                <img 
-                  src="/api/placeholder/400/200" 
-                  alt="Mock Interview Demo" 
+                <img
+                  src="/api/placeholder/400/200"
+                  alt="Mock Interview Demo"
                   className="w-full h-auto transition-transform hover:scale-105 duration-300"
                 />
               </div>
-              
+
               <div className="flex justify-center pt-4">
                 <a
                   href="https://ai-interview-smoky.vercel.app/"
@@ -238,7 +229,7 @@ const RedesignedPlatform = () => {
           <div className="bg-white bg-opacity-90 rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:bg-gradient-to-br hover:from-white hover:to-purple-100 hover:transform hover:-translate-y-1 relative">
             {/* Decorative Pattern */}
             <div className="absolute top-0 right-0 w-24 h-24 bg-purple-100 rounded-bl-full opacity-70"></div>
-            
+
             <div className="p-8 relative">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="p-3 bg-purple-100 rounded-full">
@@ -246,7 +237,7 @@ const RedesignedPlatform = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900">Placed</h3>
               </div>
-              
+
               {/* Feature List with Icons */}
               <div className="mb-8">
                 <p className="text-gray-600 mb-4">
@@ -280,16 +271,16 @@ const RedesignedPlatform = () => {
                   </li>
                 </ul>
               </div>
-              
+
               {/* Image */}
               <div className="mb-8 rounded-lg overflow-hidden">
-                <img 
-                  src="/api/placeholder/400/200" 
-                  alt="Job Platform Demo" 
+                <img
+                  src="/api/placeholder/400/200"
+                  alt="Job Platform Demo"
                   className="w-full h-auto transition-transform hover:scale-105 duration-300"
                 />
               </div>
-              
+
               <div className="flex justify-center pt-4">
                 <Link
                   to="/platform"
