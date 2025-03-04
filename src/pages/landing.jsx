@@ -443,33 +443,9 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* FAQ Section - Enhanced */}
-      <section className="py-16 w-full">
-        <div className="w-full px-4 md:px-8 lg:px-16">
-          <h2 className="text-4xl font-bold text-center mb-4">Frequently Asked Questions</h2>
-          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Find answers to common questions about our platform</p>
+     
           
-          <div className="max-w-3xl mx-auto">
-            <Accordion type="single" collapsible className="w-full">
-              {faqs.map((faq) => (
-                <AccordionItem key={faq.id} value={faq.id} className="mb-4 border rounded-lg">
-                  <AccordionTrigger className="text-xl font-semibold p-4 hover:bg-gray-50">{faq.question}</AccordionTrigger>
-                  <AccordionContent className="text-lg p-4 pt-0">{faq.answer}</AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
           
-          <div className="text-center mt-10">
-            <p className="text-gray-600 mb-4">Still have questions?</p>
-            <Link to="/contact">
-              <Button variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-medium">
-                Contact Support
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
        {/* Footer */}
        <footer className="bg-white bg-opacity-80 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
